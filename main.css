@@ -3,43 +3,44 @@
 }
 
 body {
-    font-size: 10px;
+    font-size: 13px;
     font-family: Tahoma, Arial;
+    line-height: 1.6; /* Improved accessibility by increasing readability */
 }
 
-div.menu {
+header nav {
     width: 100%;
-    background-color: #4d5791;
+    background-color: #9e3e96;
     height: 44px;
     padding: 0 40px;
 }
 
-div.menu ul,
-div.menu ul li {
+header nav ul,
+header nav ul li {
     margin: 0;
-    padding: 0 ;
+    padding: 0;
     list-style: none;
     display: inline-block;
 }
 
-div.menu ul li a {
+header nav ul li a {
     display: block;
     padding: 0 20px;
     line-height: 44px;
     font-size: 1.4em;
     text-decoration: none;
-    color: #fff;
+    color: #2ab855;
     margin: 0;
 }
 
-div.menu ul li a:hover  {
+header nav ul li a:hover {
     background-color: white;
-    color: #4d5791;
+    color: #9cb443;
 }
 
-div.hero {
+.hero {
     height: 350px;
-    background-color: #b4c6f0;
+    background-color: #20b3a6;
     background-image: url('/bg.png');
     background-size: 400px;
     background-repeat: no-repeat;
@@ -47,23 +48,23 @@ div.hero {
     padding-top: 40px;
 }
 
-div.hero h1,
-div.hero h2 {
+.hero h1,
+.hero h2 {
     text-align: center;
     margin: 0;
 }
 
-div.hero h1 {
+.hero h1 {
     color: #fff;
     font-size: 4.2em;
     margin-bottom: 20px;
 }
 
-div.hero h2 {
-    color: #4d5791;
+.hero h2 {
+    color: #a08286;
 }
 
-.container {
+main.container {
     padding: 40px;
     width: 100%;
 }
@@ -73,9 +74,9 @@ div.hero h2 {
     display: inline-block;
 }
 
-.bottom {
+footer.bottom {
     height: 50px;
-    background-color: #b4c6f0;
+    background-color: #d49432;
     padding: 40px;
 }
 
@@ -83,7 +84,7 @@ div.hero h2 {
     text-align: center;
 }
 
-.container div.text-box {
+.container section article {
     display: inline-block;
     width: 100%;
     max-width: 340px;
@@ -92,7 +93,23 @@ div.hero h2 {
 }
 
 @media screen and (min-width: 768px) {
-    .container .div.text-box {
+    .container section article {
         margin: 10px;
     }
+}
+
+.skip {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+}
+
+.skip:focus {
+    left: 10px;
+    top: 10px;
+    background-color: #fff;
+    color: #c53c91;
+    padding: 8px;
+    z-index: 1000;
+    border-radius: 4px;
 }
